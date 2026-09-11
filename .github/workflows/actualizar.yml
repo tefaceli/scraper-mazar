@@ -3,7 +3,7 @@ name: Actualizar cota Mazar
 on:
   schedule:
     - cron: '15 5 * * *'   # 00:15 Ecuador -> madrugada, cierre del dia anterior
-    - cron: '10 16 * * *'  # 11:10 Ecuador -> en vivo
+    - cron: '10 11 * * *'  # 06:10 Ecuador -> en vivo
     - cron: '10 23 * * *'  # 18:10 Ecuador -> en vivo
   workflow_dispatch:        # para probarlo a mano este fin de semana
 
