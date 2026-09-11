@@ -38,10 +38,20 @@ ultimo = items_con_valor[0]
 valor_actual = round(ultimo["valueedit"], 2)
 hora_actual = ultimo["loctimestamp"]
 
+params["mrid"] = 30538  # caudal Mazar
+
+respuesta_caudal = requests.get(url, params=params, timeout=30)
+items_caudal = respuesta_caudal.json()["items"]
+
+items_caudal_con_valor = [item for item in items_caudal if item["valueedit"] is not None]
+ultimo_caudal = items_caudal_con_valor[0]
+
+caudal_actual = round(ultimo_caudal["valueedit"], 2)
+
 print(f"Modo: {MODE} | dia objetivo: {dia_objetivo} | valor: {valor_actual} | hora dato: {hora_actual}")
 
 # --- en_vivo.json se actualiza SIEMPRE, en las 3 corridas ---
-en_vivo = {"cota": valor_actual, "actualizado": hora_actual}
+en_vivo = {"cota": valor_actual, "caudal": caudal_actual, "actualizado": hora_actual}
 with open("data/en_vivo.json", "w") as f:
     json.dump(en_vivo, f, ensure_ascii=False, indent=2)
 
@@ -50,7 +60,7 @@ if MODE == "madrugada":
     historico = json.load(open("data/historico.json"))
     fecha_cierre = dia_objetivo.strftime("%Y-%m-%d")
     fechas_existentes = set(punto["fecha"] for punto in historico)
-    punto_nuevo = {"fecha": fecha_cierre, "cota": valor_actual}
+    punto_nuevo = {"fecha": fecha_cierre, "cota": valor_actual, "caudal": caudal_actual}
     historico = historico + ([punto_nuevo] if fecha_cierre not in fechas_existentes else [])
     json.dump(historico, open("data/historico.json", "w"), ensure_ascii=False, indent=2)
     print(f"historico.json ahora tiene {len(historico)} dias")
