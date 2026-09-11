@@ -1,0 +1,42 @@
+name: Actualizar cota Mazar
+
+on:
+  schedule:
+    - cron: '15 5 * * *'   # 00:15 Ecuador -> madrugada, cierre del dia anterior
+    - cron: '10 16 * * *'  # 11:10 Ecuador -> en vivo
+    - cron: '10 23 * * *'  # 18:10 Ecuador -> en vivo
+  workflow_dispatch:        # para probarlo a mano este fin de semana
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests
+
+      - name: Determinar modo segun el cron que disparo
+        id: modo
+        run: |
+          if [ "${{ github.event.schedule }}" = "15 5 * * *" ]; then
+            echo "modo=madrugada" >> "$GITHUB_OUTPUT"
+          else
+            echo "modo=dia" >> "$GITHUB_OUTPUT"
+          fi
+
+      - run: python scripts/actualizar_cota.py ${{ steps.modo.outputs.modo }}
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Actualiza cota Mazar"
+          git push
