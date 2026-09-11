@@ -2,206 +2,370 @@
   {
     "fecha": "2026-08-01",
     "cota": 2152.68,
-    "caudal": 58.9
+    "caudal": 58.9,
+    "hidraulica_mw": 3497.67,
+    "termica_mw": 852.49,
+    "otros_mw": 93.96,
+    "importacion_colombia_mw": 5.97
   },
   {
     "fecha": "2026-08-02",
     "cota": 2152.72,
-    "caudal": 52.99
+    "caudal": 52.99,
+    "hidraulica_mw": 3133.41,
+    "termica_mw": 814.93,
+    "otros_mw": 91.07,
+    "importacion_colombia_mw": 5.63
   },
   {
     "fecha": "2026-08-03",
     "cota": 2152.59,
-    "caudal": 58.9
+    "caudal": 58.9,
+    "hidraulica_mw": 3495.8,
+    "termica_mw": 871.33,
+    "otros_mw": 77.84,
+    "importacion_colombia_mw": 5.43
   },
   {
     "fecha": "2026-08-04",
     "cota": 2152.39,
-    "caudal": 57.89
+    "caudal": 57.89,
+    "hidraulica_mw": 3658.77,
+    "termica_mw": 867.26,
+    "otros_mw": 83.55,
+    "importacion_colombia_mw": 6.56
   },
   {
     "fecha": "2026-08-05",
     "cota": 2152.28,
-    "caudal": 51.92
+    "caudal": 51.92,
+    "hidraulica_mw": 3358.25,
+    "termica_mw": 872.61,
+    "otros_mw": 90.14,
+    "importacion_colombia_mw": 282.77
   },
   {
     "fecha": "2026-08-06",
     "cota": 2152.16,
-    "caudal": 44.29
+    "caudal": 44.29,
+    "hidraulica_mw": 3405.15,
+    "termica_mw": 843.78,
+    "otros_mw": 90.75,
+    "importacion_colombia_mw": 373.8
   },
   {
     "fecha": "2026-08-07",
     "cota": 2151.62,
-    "caudal": 35.75
+    "caudal": 35.75,
+    "hidraulica_mw": 3750.96,
+    "termica_mw": 848.61,
+    "otros_mw": 93.77,
+    "importacion_colombia_mw": 7.19
   },
   {
     "fecha": "2026-08-08",
     "cota": 2150.89,
-    "caudal": 39.6
+    "caudal": 39.6,
+    "hidraulica_mw": 3580.02,
+    "termica_mw": 776.55,
+    "otros_mw": 96.95,
+    "importacion_colombia_mw": 6.81
   },
   {
     "fecha": "2026-08-09",
     "cota": 2150.56,
-    "caudal": 41.91
+    "caudal": 41.91,
+    "hidraulica_mw": 3257.57,
+    "termica_mw": 769.23,
+    "otros_mw": 94.18,
+    "importacion_colombia_mw": 5.54
   },
   {
     "fecha": "2026-08-10",
     "cota": 2150.17,
-    "caudal": 51.13
+    "caudal": 51.13,
+    "hidraulica_mw": 3405.02,
+    "termica_mw": 843.7,
+    "otros_mw": 90.56,
+    "importacion_colombia_mw": 6.24
   },
   {
     "fecha": "2026-08-11",
     "cota": 2150.82,
-    "caudal": 154.71
+    "caudal": 154.71,
+    "hidraulica_mw": 3617.03,
+    "termica_mw": 852.6,
+    "otros_mw": 79.35,
+    "importacion_colombia_mw": 154.6
   },
   {
     "fecha": "2026-08-12",
     "cota": 2151.3,
-    "caudal": 117.62
+    "caudal": 117.62,
+    "hidraulica_mw": 3669.42,
+    "termica_mw": 845.05,
+    "otros_mw": 85.49,
+    "importacion_colombia_mw": 204.54
   },
   {
     "fecha": "2026-08-13",
     "cota": 2151.26,
-    "caudal": 57.38
+    "caudal": 57.38,
+    "hidraulica_mw": 3887.98,
+    "termica_mw": 854.44,
+    "otros_mw": 81.37,
+    "importacion_colombia_mw": 7.33
   },
   {
     "fecha": "2026-08-14",
     "cota": 2150.78,
-    "caudal": 41.74
+    "caudal": 41.74,
+    "hidraulica_mw": 3878.37,
+    "termica_mw": 844.57,
+    "otros_mw": 75.53,
+    "importacion_colombia_mw": 17.39
   },
   {
     "fecha": "2026-08-15",
     "cota": 2150.65,
-    "caudal": 73.62
+    "caudal": 73.62,
+    "hidraulica_mw": 3566.94,
+    "termica_mw": 838.36,
+    "otros_mw": 78.12,
+    "importacion_colombia_mw": 17.52
   },
   {
     "fecha": "2026-08-16",
     "cota": 2150.83,
-    "caudal": 74.92
+    "caudal": 74.92,
+    "hidraulica_mw": 3206.06,
+    "termica_mw": 858.91,
+    "otros_mw": 77.99,
+    "importacion_colombia_mw": 5.81
   },
   {
     "fecha": "2026-08-17",
     "cota": 2150.75,
-    "caudal": 53.48
+    "caudal": 53.48,
+    "hidraulica_mw": 3575.77,
+    "termica_mw": 891.01,
+    "otros_mw": 69.24,
+    "importacion_colombia_mw": 5.87
   },
   {
     "fecha": "2026-08-18",
     "cota": 2150.34,
-    "caudal": 41.74
+    "caudal": 41.74,
+    "hidraulica_mw": 3705.98,
+    "termica_mw": 903.19,
+    "otros_mw": 83.26,
+    "importacion_colombia_mw": 18.43
   },
   {
     "fecha": "2026-08-19",
     "cota": 2149.52,
-    "caudal": 36.24
+    "caudal": 36.24,
+    "hidraulica_mw": 3741.66,
+    "termica_mw": 792.57,
+    "otros_mw": 95.56,
+    "importacion_colombia_mw": 58.34
   },
   {
     "fecha": "2026-08-20",
     "cota": 2149.01,
-    "caudal": 45.07
+    "caudal": 45.07,
+    "hidraulica_mw": 3765.02,
+    "termica_mw": 886.63,
+    "otros_mw": 101.36,
+    "importacion_colombia_mw": 57.64
   },
   {
     "fecha": "2026-08-21",
     "cota": 2148.5,
-    "caudal": 54.36
+    "caudal": 54.36,
+    "hidraulica_mw": 3692.53,
+    "termica_mw": 845.73,
+    "otros_mw": 100.71,
+    "importacion_colombia_mw": 112.71
   },
   {
     "fecha": "2026-08-22",
     "cota": 2148.31,
-    "caudal": 38.69
+    "caudal": 38.69,
+    "hidraulica_mw": 3486.69,
+    "termica_mw": 796.93,
+    "otros_mw": 97.83,
+    "importacion_colombia_mw": 65.68
   },
   {
     "fecha": "2026-08-23",
     "cota": 2148.29,
-    "caudal": 45.03
+    "caudal": 45.03,
+    "hidraulica_mw": 2954.2,
+    "termica_mw": 865.5,
+    "otros_mw": 98.78,
+    "importacion_colombia_mw": 158.58
   },
   {
     "fecha": "2026-08-24",
     "cota": 2147.84,
-    "caudal": 41.27
+    "caudal": 41.27,
+    "hidraulica_mw": 3475.81,
+    "termica_mw": 817.12,
+    "otros_mw": 89.51,
+    "importacion_colombia_mw": 314.06
   },
   {
     "fecha": "2026-08-25",
     "cota": 2147.96,
-    "caudal": 85.33
+    "caudal": 85.33,
+    "hidraulica_mw": 3514.9,
+    "termica_mw": 811.37,
+    "otros_mw": 85.68,
+    "importacion_colombia_mw": 330.3
   },
   {
     "fecha": "2026-08-26",
     "cota": 2147.78,
-    "caudal": 58.07
+    "caudal": 58.07,
+    "hidraulica_mw": 3526.34,
+    "termica_mw": 834.46,
+    "otros_mw": 92.58,
+    "importacion_colombia_mw": 353.37
   },
   {
     "fecha": "2026-08-27",
     "cota": 2147.51,
-    "caudal": 37.36
+    "caudal": 37.36,
+    "hidraulica_mw": 3535.16,
+    "termica_mw": 847.47,
+    "otros_mw": 98.41,
+    "importacion_colombia_mw": 351.41
   },
   {
     "fecha": "2026-08-28",
     "cota": 2147.06,
-    "caudal": 29.97
+    "caudal": 29.97,
+    "hidraulica_mw": 3569.89,
+    "termica_mw": 858.47,
+    "otros_mw": 94.03,
+    "importacion_colombia_mw": 335.71
   },
   {
     "fecha": "2026-08-29",
     "cota": 2146.82,
-    "caudal": 38
+    "caudal": 38,
+    "hidraulica_mw": 3161.23,
+    "termica_mw": 884.12,
+    "otros_mw": 84.35,
+    "importacion_colombia_mw": 290.54
   },
   {
     "fecha": "2026-08-30",
     "cota": 2147.06,
-    "caudal": 57.77
+    "caudal": 57.77,
+    "hidraulica_mw": 3000.74,
+    "termica_mw": 889.79,
+    "otros_mw": 83.93,
+    "importacion_colombia_mw": 178.81
   },
   {
     "fecha": "2026-08-31",
     "cota": 2147.24,
-    "caudal": 60.88
+    "caudal": 60.88,
+    "hidraulica_mw": 3378.65,
+    "termica_mw": 883.41,
+    "otros_mw": 84.47,
+    "importacion_colombia_mw": 305.09
   },
   {
     "fecha": "2026-09-01",
     "cota": 2147.03,
-    "caudal": 40.1
+    "caudal": 40.1,
+    "hidraulica_mw": 3380.1,
+    "termica_mw": 885.98,
+    "otros_mw": 76.23,
+    "importacion_colombia_mw": 320.9
   },
   {
     "fecha": "2026-09-02",
     "cota": 2146.66,
-    "caudal": 38.95
+    "caudal": 38.95,
+    "hidraulica_mw": 3537.7,
+    "termica_mw": 908.11,
+    "otros_mw": 80.43,
+    "importacion_colombia_mw": 311.07
   },
   {
     "fecha": "2026-09-03",
     "cota": 2146.19,
-    "caudal": 56.62
+    "caudal": 56.62,
+    "hidraulica_mw": 3512.4,
+    "termica_mw": 887.52,
+    "otros_mw": 90.74,
+    "importacion_colombia_mw": 310.59
   },
   {
     "fecha": "2026-09-04",
     "cota": 2146.3,
-    "caudal": 87.01
+    "caudal": 87.01,
+    "hidraulica_mw": 3491.57,
+    "termica_mw": 747.06,
+    "otros_mw": 100.32,
+    "importacion_colombia_mw": 349.93
   },
   {
     "fecha": "2026-09-05",
     "cota": 2146.32,
-    "caudal": 74.02
+    "caudal": 74.02,
+    "hidraulica_mw": 3369.73,
+    "termica_mw": 742.63,
+    "otros_mw": 99.49,
+    "importacion_colombia_mw": 247.51
   },
   {
     "fecha": "2026-09-06",
     "cota": 2145.74,
-    "caudal": 49.98
+    "caudal": 49.98,
+    "hidraulica_mw": 3207.23,
+    "termica_mw": 660.38,
+    "otros_mw": 99.64,
+    "importacion_colombia_mw": 146.64
   },
   {
     "fecha": "2026-09-07",
     "cota": 2144.95,
-    "caudal": 40.09
+    "caudal": 40.09,
+    "hidraulica_mw": 3692.21,
+    "termica_mw": 767.38,
+    "otros_mw": 80.46,
+    "importacion_colombia_mw": 6.08
   },
   {
     "fecha": "2026-09-08",
     "cota": 2144.09,
-    "caudal": 36.09
+    "caudal": 36.09,
+    "hidraulica_mw": 3726.06,
+    "termica_mw": 852.66,
+    "otros_mw": 90.1,
+    "importacion_colombia_mw": 5.68
   },
   {
     "fecha": "2026-09-09",
     "cota": 2143.42,
-    "caudal": 60.09
+    "caudal": 60.09,
+    "hidraulica_mw": 3762.44,
+    "termica_mw": 945.98,
+    "otros_mw": 83.87,
+    "importacion_colombia_mw": 6.06
   },
   {
     "fecha": "2026-09-10",
     "cota": 2143.12,
-    "caudal": 77.79
+    "caudal": 77.79,
+    "hidraulica_mw": 3822.64,
+    "termica_mw": 910.01,
+    "otros_mw": 89.05,
+    "importacion_colombia_mw": 5.95
   }
 ]
