@@ -2,9 +2,9 @@ name: Actualizar cota Mazar
 
 on:
   schedule:
-    - cron: '15 5 * * *'   # 00:15 Ecuador -> madrugada, cierre del dia anterior
-    - cron: '10 11 * * *'  # 06:10 Ecuador -> en vivo
-    - cron: '10 23 * * *'  # 18:10 Ecuador -> en vivo
+    - cron: '23 5 * * *'   # 00:23 Ecuador -> madrugada, cierre del dia anterior
+    - cron: '17 11 * * *'  # 06:17 Ecuador -> en vivo
+    - cron: '13 23 * * *'  # 18:13 Ecuador -> en vivo
   workflow_dispatch:        # para probarlo a mano este fin de semana
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
       - name: Determinar modo segun el cron que disparo
         id: modo
         run: |
-          if [ "${{ github.event.schedule }}" = "15 5 * * *" ]; then
+          if [ "${{ github.event.schedule }}" = "23 5 * * *" ]; then
             echo "modo=madrugada" >> "$GITHUB_OUTPUT"
           else
             echo "modo=dia" >> "$GITHUB_OUTPUT"
