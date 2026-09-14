@@ -23,13 +23,16 @@ class AdaptadorTLS(HTTPAdapter):
 sesion = requests.Session()
 sesion.mount("https://", AdaptadorTLS())
 
-# Ecuador es UTC-5 fijo, sin horario de verano
-ahora_utc = datetime.datetime.utcnow()
-ahora_ecuador = ahora_utc - datetime.timedelta(hours=5)
-hoy_ecuador = ahora_ecuador.date()
+if len(sys.argv) > 1 and sys.argv[1] != "":
+    ayer_ecuador = datetime.datetime.strptime(sys.argv[1], "%Y-%m-%d").date()
+else:
+    # Ecuador es UTC-5 fijo, sin horario de verano
+    ahora_utc = datetime.datetime.utcnow()
+    ahora_ecuador = ahora_utc - datetime.timedelta(hours=5)
+    hoy_ecuador = ahora_ecuador.date()
+    # CENACE publica el informe a dia vencido: hoy tenemos el dato de ayer
+    ayer_ecuador = hoy_ecuador - datetime.timedelta(days=1)
 
-# CENACE publica el informe a dia vencido: hoy tenemos el dato de ayer
-ayer_ecuador = hoy_ecuador - datetime.timedelta(days=1)
 fecha_cenace = ayer_ecuador.strftime("%Y/%m/%d")
 
 url = "https://smec.cenace.gob.ec/SMEC/ResultadoInforme1.do?fecha=" + fecha_cenace

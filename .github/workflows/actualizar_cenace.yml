@@ -2,8 +2,13 @@ name: Actualizar CENACE
 
 on:
   schedule:
-    - cron: '0 10 * * *'   # 05:00 Ecuador -> informe de CENACE del dia anterior
-  workflow_dispatch:        # para probarlo a mano
+    - cron: '15 16 * * *'   # 11:15 Ecuador -> informe de CENACE del dia anterior
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: 'Fecha a forzar (YYYY-MM-DD), vacio = usa el dia de ayer'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -20,7 +25,7 @@ jobs:
 
       - run: pip install requests beautifulsoup4
 
-      - run: python scripts/scraper_cenace.py
+      - run: python scripts/scraper_cenace.py "${{ github.event.inputs.fecha }}"
 
       - name: Commit y push si hay cambios
         run: |
