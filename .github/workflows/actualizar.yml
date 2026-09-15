@@ -1,11 +1,12 @@
 name: Actualizar cota Mazar
 
 on:
-  schedule:
-    - cron: '23 5 * * *'   # 00:23 Ecuador -> madrugada, cierre del dia anterior
-    - cron: '17 11 * * *'  # 06:17 Ecuador -> en vivo
-    - cron: '13 23 * * *'  # 18:13 Ecuador -> en vivo
-  workflow_dispatch:        # para probarlo a mano este fin de semana
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'madrugada o dia'
+        required: true
+        default: 'dia'
 
 permissions:
   contents: write
@@ -21,15 +22,6 @@ jobs:
           python-version: '3.11'
 
       - run: pip install requests
-
-      - name: Determinar modo segun el cron que disparo
-        id: modo
-        run: |
-          if [ "${{ github.event.schedule }}" = "23 5 * * *" ]; then
-            echo "modo=madrugada" >> "$GITHUB_OUTPUT"
-          else
-            echo "modo=dia" >> "$GITHUB_OUTPUT"
-          fi
 
       - run: python scripts/actualizar_cota.py ${{ steps.modo.outputs.modo }}
 

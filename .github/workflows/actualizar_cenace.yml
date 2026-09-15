@@ -1,8 +1,6 @@
 name: Actualizar CENACE
 
 on:
-  schedule:
-    - cron: '22 16 * * *'   # 11:22 Ecuador -> informe de CENACE del dia anterior
   workflow_dispatch:
     inputs:
       fecha:
