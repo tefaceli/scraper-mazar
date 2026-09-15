@@ -23,7 +23,7 @@ jobs:
 
       - run: pip install requests
 
-      - run: python scripts/actualizar_cota.py ${{ steps.modo.outputs.modo }}
+      - run: python scripts/actualizar_cota.py ${{ github.event.inputs.modo }}
 
       - name: Commit y push si hay cambios
         run: |
