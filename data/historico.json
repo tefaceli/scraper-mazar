@@ -407,6 +407,10 @@
   {
     "fecha": "2026-09-15",
     "cota": 2139.41,
-    "caudal": 88.04
+    "caudal": 88.04,
+    "hidraulica_mw": 3842.98,
+    "termica_mw": 885.49,
+    "otros_mw": 67.33,
+    "importacion_colombia_mw": 5.36
   }
 ]
