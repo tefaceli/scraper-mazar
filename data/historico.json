@@ -430,5 +430,12 @@
     "termica_mw": 888.49,
     "otros_mw": 75.48,
     "importacion_colombia_mw": 6.3
+  },
+  {
+    "hidraulica_mw": 3786.34,
+    "termica_mw": 886.94,
+    "otros_mw": 68.48,
+    "importacion_colombia_mw": 5.73,
+    "fecha": "2026-09-18"
   }
 ]
