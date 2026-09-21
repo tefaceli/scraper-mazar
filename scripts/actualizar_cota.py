@@ -59,8 +59,16 @@ with open("data/en_vivo.json", "w") as f:
 if MODE == "madrugada":
     historico = json.load(open("data/historico.json"))
     fecha_cierre = dia_objetivo.strftime("%Y-%m-%d")
-    fechas_existentes = set(punto["fecha"] for punto in historico)
-    punto_nuevo = {"fecha": fecha_cierre, "cota": valor_actual, "caudal": caudal_actual}
-    historico = historico + ([punto_nuevo] if fecha_cierre not in fechas_existentes else [])
+    datos_cota = {"cota": valor_actual, "caudal": caudal_actual}
+    indice_existente = None
+    for i in range(len(historico)):
+        if historico[i]["fecha"] == fecha_cierre:
+            indice_existente = i
+    if indice_existente is not None:
+        historico[indice_existente].update(datos_cota)
+    else:
+        punto_nuevo = dict(datos_cota)
+        punto_nuevo["fecha"] = fecha_cierre
+        historico.append(punto_nuevo)
     json.dump(historico, open("data/historico.json", "w"), ensure_ascii=False, indent=2)
     print(f"historico.json ahora tiene {len(historico)} dias")
