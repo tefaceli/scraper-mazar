@@ -7,6 +7,10 @@ on:
         description: 'madrugada o dia'
         required: true
         default: 'dia'
+      fecha_forzar:
+        description: 'Fecha a rellenar (YYYY-MM-DD), vacio = corre normal'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -22,6 +26,13 @@ jobs:
           python-version: '3.11'
 
       - run: pip install requests
+
+      - name: Forzar la fecha del sistema si se especifico
+        if: ${{ github.event.inputs.fecha_forzar != '' }}
+        run: |
+          FECHA_OBJETIVO="${{ github.event.inputs.fecha_forzar }}"
+          FECHA_SIGUIENTE=$(date -u -d "$FECHA_OBJETIVO +1 day" +%Y-%m-%d)
+          sudo date -u -s "$FECHA_SIGUIENTE 12:00:00"
 
       - run: python scripts/actualizar_cota.py ${{ github.event.inputs.modo }}
 
