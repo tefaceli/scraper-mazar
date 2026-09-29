@@ -69,7 +69,7 @@ with open("data/en_vivo.json", "w") as f:
 if MODE == "madrugada":
     historico = json.load(open("data/historico.json"))
     fecha_cierre = dia_objetivo.strftime("%Y-%m-%d")
-        datos_cota = {"cota": valor_actual, "caudal": caudal_actual, "caudal_ccs": caudal_ccs_actual}
+    datos_cota = {"cota": valor_actual, "caudal": caudal_actual, "caudal_ccs": caudal_ccs_actual}
     indice_existente = None
     for i in range(len(historico)):
         if historico[i]["fecha"] == fecha_cierre:
