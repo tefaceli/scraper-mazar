@@ -48,10 +48,20 @@ ultimo_caudal = items_caudal_con_valor[0]
 
 caudal_actual = round(ultimo_caudal["valueedit"], 2)
 
+params["mrid"] = 100037  # caudal Coca Codo Sinclair
+
+respuesta_ccs = requests.get(url, params=params, timeout=30)
+items_ccs = respuesta_ccs.json()["items"]
+
+items_ccs_con_valor = [item for item in items_ccs if item["valueedit"] is not None]
+ultimo_ccs = items_ccs_con_valor[0]
+
+caudal_ccs_actual = round(ultimo_ccs["valueedit"], 2)
+
 print(f"Modo: {MODE} | dia objetivo: {dia_objetivo} | valor: {valor_actual} | hora dato: {hora_actual}")
 
 # --- en_vivo.json se actualiza SIEMPRE, en las 3 corridas ---
-en_vivo = {"cota": valor_actual, "caudal": caudal_actual, "actualizado": hora_actual}
+en_vivo = {"cota": valor_actual, "caudal": caudal_actual, "caudal_ccs": caudal_ccs_actual, "actualizado": hora_actual}
 with open("data/en_vivo.json", "w") as f:
     json.dump(en_vivo, f, ensure_ascii=False, indent=2)
 
@@ -59,7 +69,7 @@ with open("data/en_vivo.json", "w") as f:
 if MODE == "madrugada":
     historico = json.load(open("data/historico.json"))
     fecha_cierre = dia_objetivo.strftime("%Y-%m-%d")
-    datos_cota = {"cota": valor_actual, "caudal": caudal_actual}
+        datos_cota = {"cota": valor_actual, "caudal": caudal_actual, "caudal_ccs": caudal_ccs_actual}
     indice_existente = None
     for i in range(len(historico)):
         if historico[i]["fecha"] == fecha_cierre:
