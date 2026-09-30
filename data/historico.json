@@ -588,5 +588,11 @@
     "otros_mw": 43.51,
     "importacion_colombia_mw": 5.85,
     "caudal_ccs": 201
+  },
+  {
+    "cota": 2132.83,
+    "caudal": 46.06,
+    "caudal_ccs": 0,
+    "fecha": "2026-09-29"
   }
 ]
