@@ -67,9 +67,25 @@ with open("data/en_vivo.json", "w") as f:
 
 # --- historico.json solo se toca en la corrida de madrugada (cierre del dia anterior) ---
 if MODE == "madrugada":
+    url_mesavg = "https://generacioncsr.celec.gob.ec:8443/ords/csr/sardomcsr/pointValuesMesAvg"
+
+    params_mesavg = {"mrid": 30538, "fechaInicio": fecha_inicio, "fechaFin": fecha_fin, "fecha": fecha_param}
+    respuesta_caudal_avg = requests.get(url_mesavg, params=params_mesavg, timeout=30)
+    items_caudal_avg = respuesta_caudal_avg.json()["items"]
+    items_caudal_avg_con_valor = [item for item in items_caudal_avg if item["valueedit"] is not None]
+    caudal_promedio = round(items_caudal_avg_con_valor[0]["valueedit"], 2)
+
+    params_mesavg["mrid"] = 100037
+    respuesta_ccs_avg = requests.get(url_mesavg, params=params_mesavg, timeout=30)
+    items_ccs_avg = respuesta_ccs_avg.json()["items"]
+    items_ccs_avg_con_valor = [item for item in items_ccs_avg if item["valueedit"] is not None]
+    caudal_ccs_promedio = round(items_ccs_avg_con_valor[0]["valueedit"], 2)
+
+    print(f"Promedios del dia anterior | caudal: {caudal_promedio} | caudal_ccs: {caudal_ccs_promedio}")
+
     historico = json.load(open("data/historico.json"))
     fecha_cierre = dia_objetivo.strftime("%Y-%m-%d")
-    datos_cota = {"cota": valor_actual, "caudal": caudal_actual, "caudal_ccs": caudal_ccs_actual}
+    datos_cota = {"cota": valor_actual, "caudal": caudal_promedio, "caudal_ccs": caudal_ccs_promedio}
     indice_existente = None
     for i in range(len(historico)):
         if historico[i]["fecha"] == fecha_cierre:
