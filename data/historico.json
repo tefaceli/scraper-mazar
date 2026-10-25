@@ -838,5 +838,11 @@
     "termica_mw": 1151.12,
     "otros_mw": 35.11,
     "importacion_colombia_mw": 4.3
+  },
+  {
+    "cota": 2123.34,
+    "caudal": 35.53,
+    "caudal_ccs": 230.67,
+    "fecha": "2026-10-24"
   }
 ]
